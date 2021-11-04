@@ -1,0 +1,47 @@
+/*body {
+    margin: 0;
+}
+
+.header {
+    padding: 30px 100px;
+    background-color: #635BD6;
+    color: white;
+    text-align: center;
+}
+
+.header h1 {
+    display: inline;
+    font-size: 32px;
+    margin-right: 50px;
+}
+
+.header h2 {
+    display: inline;
+}
+
+.content h1 {
+    background-color: red;
+}*/
+
+.content {
+    display: flex;
+    margin: 5% 5%;
+    width: 90%;
+    flex-wrap: wrap;
+    /*justify-content: center;*/
+    justify-content: space-between;
+}
+
+.content .post {
+    margin: 20px 5px;
+}
+
+
+
+/* Notes. Nested elements access */
+/*.header p {*/
+/*    color: green;*/
+/*}*/
+/*.header #header__yellow_text {*/
+/*    color: yellow;*/
+/*}*/

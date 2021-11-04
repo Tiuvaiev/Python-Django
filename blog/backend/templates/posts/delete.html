@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block additional %}
+<h1>Nothing to show</h1>
+{% endblock additional %}
+
+
+{% block content %}
+Post delete -----
+</br>
+
+<form action='' method='post'>{% csrf_token %}
+    <p>Are you sure that you wanna delete post {{ post.title }}</p>
+    <input type='submit' value='Yes!'>
+</form>
+
+{% endblock content %}
+
+

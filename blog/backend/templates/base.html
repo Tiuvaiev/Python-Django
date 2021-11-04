@@ -1,0 +1,36 @@
+{% load static %}
+
+<html>
+<head>
+    <title>SkillUp blog</title>
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        Header
+    </div>
+
+    <!-- <div class="body" style="background-color: red;"> -->
+
+    {% if user.is_authenticated %}
+        <div class="body">
+            {% block content %} {% endblock content %}
+        </div>
+    {% else %}
+        <div class="body">
+            {% block notauth_content %} {% endblock notauth_content %}
+        </div>
+    {% endif %}
+
+
+    <div class="divider">
+        <p>=====================</p>
+    </div>
+    
+    <div class="additional_data">
+        {% block additional %} {% endblock additional %}
+    </div>
+
+    <div class="footer">Footer</div>
+</body>
+</html>

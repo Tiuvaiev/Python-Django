@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block additional %}
+<h1>Nothing to show</h1>
+{% endblock additional %}
+
+
+{% block content %}
+User signup
+</br>
+
+<form action='' method='post'>{% csrf_token %}
+    {{ form }}
+    <input type='submit' value='User registration'>
+</form>
+
+{% endblock content %}
+
+
+

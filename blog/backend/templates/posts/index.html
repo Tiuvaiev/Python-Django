@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block additional %}
+<h1>Hello</h1>
+{% endblock additional %}
+
+{% block notauth_content %}
+    User is not authorized, please login
+	<p><a href="{% url 'login' %}">Login</a></p>
+	<p><a href="{% url 'accounts:signup' %}">SignUp</a></p>
+{% endblock notauth_content %}
+
+{% block content %}
+	<p><a href="{% url 'logout' %}">Logout</a></p>
+    Posts:
+
+    <a href="{% url 'posts:create' %}">Create new post</a>
+
+    <ul>
+        {% for post in object_list %}
+            <li>
+                <div class="">
+                    <a href="{% url 'posts:detail' post.id %}">{{ post.title }}</a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock content %}

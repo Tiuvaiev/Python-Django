@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block additional %}
+<h1>Nothing to show</h1>
+{% endblock additional %}
+
+
+{% block content %}
+Post: -------
+<p><a href="{% url 'posts:update' my_post.pk%}">Update this post</a></p>
+<p><a href="{% url 'posts:delete' my_post.pk%}">Delete this post</a></p>
+
+<h1>Header: {{ my_post.title }}</h1>
+<h1>Content:</h1>{{ my_post.content }}
+<h1>Author: {{ my_post.author }}</h1>
+
+
+{% endblock content %}
+
